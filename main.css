@@ -64,4 +64,22 @@ body {
     overflow: scroll;
       
 }
+li{
+    font-size: 20px;
+    font-weight: normal;
+    font-family: fantasy;
+    font-style: italic;
+    padding: 16px;
+    color: red;
+}
 
+div.scroll-container {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+    }
+    
+    div.scroll-container img {
+    padding: 10px;
+    }
