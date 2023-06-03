@@ -12,20 +12,22 @@
             font-size:large;
             cursor: pointer;
             height:150px;
-            width: 200px;
+            width: 350px;
             text-align: center;
             position: relative;
-            border-color: red;
-            border-style: outset;
-            background-color: firebrick;
+            border-color: floralwhite;
+            border-style: 5px outset;
+            background-color: red;
         }
 
         .text{
+            margin-left: 320px;
+            text-align: center;
             padding:20px;
-            font-size:25px;
+            font-size:35px;
             font-family: 'Times New Roman', Times, serif;
-            color: darkred;
-            text-shadow: 0 0 5px coral;
+            color: black;
+            
            
         }
     </style>
@@ -52,10 +54,11 @@
         <div class="text">
             <b>Капитализация на текущий момент составляет:</b> 3 272 210 176 RUB <br>
             <b>Объем торгов акций:</b>11 196 800 RUB<br>
+            <b>Число акций по последним данным(2020г.):</b> 4 507,98 млн.шт.<br>
         </div>
         
         <div class="text">
-            <button onclick="stockPrice()">Курс закрытия акций (только данные за 2020,последний месяц июль)</button>
+            <button onclick="stockPrice()" style="color: white; font-family: 'Times New Roman', Times, serif;font-weight: bold;">Курс закрытия акций<br> (только данные за 2020)</button>
             <table border="1" id="stock-price" style="margin: auto;"></table>
             <div id="average-price"></div>
             <div id="min"></div>
