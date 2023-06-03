@@ -61,4 +61,7 @@ footer {
 
 body {
     margin-bottom: 40px;
+    overflow: scroll;
+      
 }
+
