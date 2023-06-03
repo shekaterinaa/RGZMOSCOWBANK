@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основные финансовые показатели</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="economy.js"></script>
+    <style>
+        button {
+            font-size:large;
+            cursor: pointer;
+            height:150px;
+            width: 200px;
+            text-align: center;
+            position: relative;
+            border-color: red;
+            border-style: outset;
+            background-color: firebrick;
+        }
+
+        .text{
+            padding:20px;
+            font-size:25px;
+            font-family: 'Times New Roman', Times, serif;
+            color: darkred;
+            text-shadow: 0 0 5px coral;
+           
+        }
+    </style>
+
+</head>
+<body>
+    <header>  
+        <img class="logo" src="https://bogbankov.ru/wp-content/uploads/2017/10/b45ee579_resizedScaled_817to335.jpg">
+  
+        <dl>
+            <dt><a href="menu.html">О компании</a></dt>
+        </dl>
+        <dl>
+            <dt class="current"><a href="economy.html">Основные финансовые показатели</a></dt>
+        </dl>
+        <dl>
+            <dt><a href="contacts.html">Контактные данные</a></dt>
+        </dl>
+        <dl>
+            <dt><a href="video.html">Видео</a></dt>
+        </dl>           
+    </header>
+    <main style="margin-top: 30px; text-align: center;">
+        <div class="text">
+            <b>Капитализация на текущий момент составляет:</b> 3 272 210 176 RUB <br>
+            <b>Объем торгов акций:</b>11 196 800 RUB<br>
+        </div>
+        
+        <div class="text">
+            <button onclick="stockPrice()">Курс закрытия акций (только данные за 2020,последний месяц июль)</button>
+            <table border="1" id="stock-price" style="margin: auto;"></table>
+            <div id="average-price"></div>
+            <div id="min"></div>
+            <div id="max"></div>
+        </div>
+    </main>
+    <footer>
+        &copy; Шкуропатова Екатерина, ФБИ-13, 2 курс, 2023
+    </footer>
+</body>
+</html>
