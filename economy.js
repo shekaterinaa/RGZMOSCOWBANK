@@ -22,22 +22,32 @@ function stockPrice() {
     }
 
     let sum=0;
-    for (let i = 0; i < price.length; i++) {
-        sum = sum + price[i];
-    }
-    let average = sum / price.length;
-    document.getElementById('average-price').innerHTML = '<b>Среднее значение: </b>' + average;
-
-    let max = 0;
-    let min = price[0];
-    for (let i = 0; i < price.length; i++) {
-        if (max<price[i]) {
-            max = price[i];
-        }
-        else if (min>price[i]) {
-            min = price[i];
+            let k=0;
+            for (let i = 0; i < price.length; i++) {
+                sum = sum + price[i];
+                k+=1;
             }
-    }
-    document.getElementById('min').innerHTML = '<b>Минимальное значение: </b>' + min;
-    document.getElementById('max').innerHTML = '<b>Максимальное значение: </b>' + max;
-}
+            let average = sum / price.length;
+            document.getElementById('average-price').innerHTML = '<b>Среднее значение: </b>' + average;
+
+            let sum2=0;
+            for(let q=0; q < price.length; q++) {
+                sum2 = (Math.abs(price[q] - average))**2;
+            }
+            let srdotk = Math.sqrt( sum2 / k);
+
+            document.getElementById('srdotk').innerHTML = '<b>Среднеквадратическое отклонение: </b>' + srdotk.toFixed(2);
+
+            let max = 0;
+            let min = price[0];
+            for (let i = 0; i < price.length; i++) {
+                if (max<price[i]) {
+                    max = price[i];
+                }
+                else if (min>price[i]) {
+                    min = price[i];
+                    }
+            }
+            document.getElementById('min').innerHTML = '<b>Минимальное значение: </b>' + min;
+            document.getElementById('max').innerHTML = '<b>Максимальное значение: </b>' + max;
+        }
